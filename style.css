@@ -275,12 +275,13 @@ button:hover {
 }
 
 /* Default styling for .notice */
+/* Style for the notice in footer */
 .notice {
-    position: fixed; /* Fix the bar at the bottom of the viewport */
+    position: fixed; /* Fixes it to the bottom of the page */
     bottom: 0; /* Position it at the bottom */
     left: 50%; /* Center it horizontally */
     transform: translateX(-50%); /* Adjust for exact centering */
-    background-color: rgba(255, 255, 255, 0.9); /* Light background with some transparency */
+    background-color: rgba(255, 255, 255, 0.9); /* Light background with transparency */
     padding: 10px; /* Add some padding */
     border-radius: 8px;
     width: 80%; /* Adjust the width */
@@ -289,6 +290,7 @@ button:hover {
 
     overflow-y: auto; /* Make the content scrollable vertically */
     box-sizing: border-box; /* Ensure padding doesn't affect the width */
+    z-index: 1000; /* Ensure it stays on top of other elements */
 }
 
 /* Styling for the notice heading and list */
@@ -313,7 +315,6 @@ button:hover {
 @media (max-width: 768px) {
     .notice {
         background-color: yellow; /* This will help you see if the media query is being triggered */
-        margin-top: 0; /* Remove margin-top for mobile */
         max-height: 250px; /* Reduce height on mobile if needed */
         padding: 15px; /* Adjust padding for mobile */
     }
